@@ -1,0 +1,34 @@
+ul {
+    list-style-type: none;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border: solid #000 1px;
+    background-color: #fff;
+}
+
+.box {
+    width: 50%;
+    float: left;
+    padding: 20px 0;
+}
+#box1 {
+    background-color: #fdd;
+}
+#box2 {
+    background-color: #ddf;
+}
+.del {
+    float: right;
+    background-color: #fff;
+    color: #f00;
+    transition: all .3s;
+}
+
+.del:hover {
+    background-color: #f00;
+    color: #fff;
+}

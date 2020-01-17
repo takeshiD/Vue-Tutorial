@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Todoアプリ</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js"></script>
+
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="box1" class="box">
+            <button v-on:click="doAdd">追加</button>
+            <ul>
+                <draggable v-model="myList" :options="{group: 'ITEMS',
+                                   animation:200}">
+                    <li v-for="item, index in items" :key="item.no">
+                        {{item.name}}-(No.{{item.no}})
+                        <span class="del" @click="doDelete(item, index, '')">削除</span>
+                    </li>
+                </draggable>
+            </ul>
+        </div>
+        <div id="box2" class="box">
+            <button v-on:click="doAdd">追加</button>
+            <ul>
+                <draggable v-model="myList" :options="{group: 'ITEMS',
+                                   animation:200}">
+                    <li v-for="item, index in items2" v-bind:key="item.no">
+                        {{item.name}}-(No.{{item.no}})
+                        <span class="del" @click="doDelete(item, index, '')">削除</span>
+                    </li>
+                </draggable>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./js/main.js"></script>
+
+</html>
