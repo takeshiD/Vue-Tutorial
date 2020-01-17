@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#calculator {
+    margin: 1em 2em;
+}
+.calc-result {
+    text-align: end;
+}
