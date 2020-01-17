@@ -1,2 +1,2 @@
 # Vue Tutorial
- Entry Vue.js
+ 個人的なVue.jsの入門記
