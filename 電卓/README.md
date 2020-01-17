@@ -4,7 +4,7 @@
 
 ## 使用したライブラリ
 
-- JS
-    * Vue.js v2.X
-- CSS
-    * Skeleton v2.0.4
+- JSフレームワーク  
+    Vue.js v2.X
+- CSSフレームワーク  
+    Skeleton v2.0.4
