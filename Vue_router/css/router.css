@@ -1,0 +1,29 @@
+.profile {
+    background-color: aliceblue;
+}
+.post {
+    background-color: aquamarine;
+}
+
+.home {
+    background-color: coral;
+}
+
+#app {
+    height: 1200px;
+    padding-left: 200px;
+    border: solid 1px darkslateblue;
+}
+
+#top {
+    height: 100%;
+    border: solid 1px red;
+}
+#middle {
+    height: 100%;
+    border: solid 1px red;
+}
+#bottom {
+    height: 100%;
+    border: solid 1px red;
+}

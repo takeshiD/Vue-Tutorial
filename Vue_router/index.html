@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>シングル頁アプリ</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+    <link rel="stylesheet" href="./css/router.css">
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            <router-link to="/user/foo">/user/foo</router-link>
+            <router-link to="/user/foo/profile">/user/foo/profile</router-link>
+            <router-link to="/user/foo/posts">/user/foo/posts</router-link>
+        </p>
+        <router-view></router-view>
+        <div id="top">top</div>
+        <a href="#" v-scroll-to="toBottom">Scroll to bottom</a>
+        <div id="middle">middle</div>
+        <a href="#" v-scroll-to="toTop">Scroll to top</a>
+        <div id="bottom">bottom</div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
