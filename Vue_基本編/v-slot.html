@@ -9,19 +9,7 @@
 
 <body>
     <div id="slot-test">
-        <!-- <com0>
-            <strong>ABCDE</strong>
-            <strong slot="slot2">VWXYZ</strong>
-        </com0> -->
         <com0>
-            <!-- 表示されない -->
-            <strong>ABCDE</strong>
-
-            <!-- 表示されない -->
-            <template v-slot:default>
-                <strong>おっぱぴー</strong>
-            </template>
-
             <!-- 表示される -->
             <template v-slot:slot1>
                 <strong>おっぱぴー</strong>
@@ -32,6 +20,19 @@
                 <strong>VWXYZ</strong>
             </template>
         </com0>
+
+        <h1>This is Slot test</h1>
+        <my-button>Cancel</my-button>
+        <book>
+            <template v-slot:title>
+                <p>坊っちゃん/夏目漱石</p>
+            </template>
+            <template v-slot:summary>親譲おやゆずりの無鉄砲むてっぽうで小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰こしを抜ぬかした事がある。</template>
+        </book>
+        <book>
+            <p slot="title">坊っちゃん/夏目漱石</p>
+            <p slot="summary">親譲おやゆずりの無鉄砲むてっぽうで小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰こしを抜ぬかした事がある。</p>
+        </book>
     </div>
 </body>
 <script src="./js/v-slot.js"></script>
