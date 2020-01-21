@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Slot Exercise</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    </head>
-    <body>
-        <div id="app">
-            {{ message }}
-        </div>
-    </body>
-    <script src="./js/v-slot.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slot Exercise</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="slot-test">
+        <!-- <com0>
+            <strong>ABCDE</strong>
+            <strong slot="slot2">VWXYZ</strong>
+        </com0> -->
+        <com0>
+            <!-- 表示されない -->
+            <strong>ABCDE</strong>
+
+            <!-- 表示されない -->
+            <template v-slot:default>
+                <strong>おっぱぴー</strong>
+            </template>
+
+            <!-- 表示される -->
+            <template v-slot:slot1>
+                <strong>おっぱぴー</strong>
+            </template>
+
+            <!-- 表示される -->
+            <template v-slot:slot2>
+                <strong>VWXYZ</strong>
+            </template>
+        </com0>
+    </div>
+</body>
+<script src="./js/v-slot.js"></script>
+
 </html>
